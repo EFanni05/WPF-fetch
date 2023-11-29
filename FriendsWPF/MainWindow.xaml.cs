@@ -70,7 +70,7 @@ namespace FriendsWPF
                 string x = item.Substring(0, 3).Replace('.', ' ').Trim();
                 int id = int.Parse(x);
                 People delete = peoples.Find(x => x.Id == id);
-                MessageBoxResult result = MessageBox.Show($"Are you sure you want to delete:\n{delete.ToString()}", "Are you sure?", MessageBoxButton.YesNo);
+                MessageBoxResult result = MessageBox.Show($"Are you sure you want to delete:\n\n{delete.ToString()}", "Are you sure?", MessageBoxButton.YesNo);
                 if(result == MessageBoxResult.Yes)
                 {
                     peoples.Remove(delete);
