@@ -9,12 +9,16 @@ namespace FetchWPF
 {
     public class People
     {
+        [JsonProperty("id")]
         private int id;
-        private int age;
-        private string hobby;
         [JsonProperty ("names")]
         private string name;
+        [JsonProperty("age")]
+        private int age;
+        [JsonProperty("gender")]
         private string gender;
+        [JsonProperty("hobby")]
+        private string hobby;
 
         public override string ToString()
         {

@@ -29,10 +29,10 @@ namespace FriendsWPF
         public MainWindow()
         {
             InitializeComponent();
-            List<People> peoples = List();
+            List<People> peoples = ListGet();
         }
 
-        public List<People> List()
+        public List<People> ListGet()
         {
             string x = client.GetStringAsync(link).Result;
             List<People> list = JsonConvert.DeserializeObject<List<People>>(x);
