@@ -81,7 +81,9 @@ namespace FriendsWPF
 
         private void Search(object sender, RoutedEventArgs e)
         {
-            // search function on separate window the out put as well
+            Search search = new Search(peoples);
+            main.Close();
+            search.Show();
         }
     }
 }

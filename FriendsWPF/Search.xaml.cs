@@ -19,9 +19,10 @@ namespace FetchWPF
     /// </summary>
     public partial class Search : Window
     {
-        public Search()
+        public Search(List<People> peoples)
         {
             InitializeComponent();
+            MessageBox.Show(peoples[0].ToString());
         }
     }
 }
