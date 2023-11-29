@@ -24,7 +24,6 @@
         <TextBox x:Name="ageTextbox" HorizontalAlignment="Left" Margin="55,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Height="18" Grid.Row="1" FontFamily="Century Gothic"/>
         <TextBox x:Name="hobbyTextbox" HorizontalAlignment="Left" Margin="55,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Height="18" Grid.Row="1" FontFamily="Century Gothic"/>
         <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="280,23,0,0" Grid.Row="1" VerticalAlignment="Top" Width="85" Height="45" FontFamily="Century Gothic" BorderBrush="#00707070" Background="#CC6BAAED" Foreground="White" Click="search"/>
-        <Button x:Name="BackSearch" Content="Back" HorizontalAlignment="Left" Margin="312,0,0,0" VerticalAlignment="Center" Width="53" FontFamily="Century Gothic" Background="#CC6BAAED" Foreground="White" BorderBrush="#00707070" Click="back"/>
         <Label Content="Search" HorizontalAlignment="Left" Margin="147,0,0,0" VerticalAlignment="Center" Cursor="Pen" Foreground="#FF7F94D4" FontFamily="Century Gothic" FontSize="22" FontWeight="Bold" FontStyle="Italic"/>
         <Label Content="Age:" HorizontalAlignment="Left" Margin="10,14,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Century Gothic" FontWeight="Bold"/>
         <Label Content="Hobby:" HorizontalAlignment="Left" Margin="3,53,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Century Gothic" FontWeight="Bold"/>

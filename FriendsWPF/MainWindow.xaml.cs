@@ -23,10 +23,11 @@ namespace FriendsWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private static string link = "https://retoolapi.dev/nuBvDe/peoples";
+        private static readonly string link = "https://retoolapi.dev/nuBvDe/peoples";
         List<People> peoples;
 
         static HttpClient client = new HttpClient();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -35,9 +36,16 @@ namespace FriendsWPF
 
         public List<People> ListGet()
         {
-            string x = client.GetStringAsync(link).Result;
-            List<People> list = JsonConvert.DeserializeObject<List<People>>(x);
-            return list;
+            string json = client.GetStringAsync(link).Result;
+            if (json != null)
+            {
+                List<People>? list = JsonConvert.DeserializeObject<List<People>>(json);
+                if (list is not null)
+                {
+                    return list;
+                }
+            }
+            return peoples;
         }
 
         private void Load(object sender, RoutedEventArgs e)
@@ -54,7 +62,9 @@ namespace FriendsWPF
 
         private void Add(object sender, RoutedEventArgs e)
         {
-            //add function on a separate window
+            AddWindow Add = new AddWindow(peoples[peoples.Count-1].Id);
+            main.Close();
+            Add.Show();
         }
 
         private void Delete(object sender, RoutedEventArgs e)
