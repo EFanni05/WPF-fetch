@@ -19,9 +19,11 @@ namespace FetchWPF
     /// </summary>
     public partial class Search : Window
     {
+        List<People> people;
         public Search(List<People> peoples)
         {
             InitializeComponent();
+            people = peoples;
         }
     }
 }

@@ -21,15 +21,15 @@
         <GroupBox x:Name="Gender" HorizontalAlignment="Left" Height="72" Header="Gender" Margin="171,0,0,0" VerticalAlignment="Center" Width="89" Grid.Row="1" FontFamily="Century Gothic" FontWeight="Bold" BorderBrush="#4C7FC3EC">
             <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="218,0,0,0" VerticalAlignment="Top"/>
         </GroupBox>
-        <TextBox HorizontalAlignment="Left" Margin="55,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Height="18" Grid.Row="1" FontFamily="Century Gothic"/>
-        <TextBox HorizontalAlignment="Left" Margin="55,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Height="18" Grid.Row="1" FontFamily="Century Gothic"/>
-        <Button Content="Search" HorizontalAlignment="Left" Margin="280,23,0,0" Grid.Row="1" VerticalAlignment="Top" Width="85" Height="45" FontFamily="Century Gothic" BorderBrush="#00707070" Background="#CC6BAAED" Foreground="White"/>
-        <Button Content="Back" HorizontalAlignment="Left" Margin="312,0,0,0" VerticalAlignment="Center" Width="53" FontFamily="Century Gothic" Background="#CC6BAAED" Foreground="White" BorderBrush="#00707070"/>
+        <TextBox x:Name="ageTextbox" HorizontalAlignment="Left" Margin="55,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Height="18" Grid.Row="1" FontFamily="Century Gothic"/>
+        <TextBox x:Name="hobbyTextbox" HorizontalAlignment="Left" Margin="55,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Height="18" Grid.Row="1" FontFamily="Century Gothic"/>
+        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="280,23,0,0" Grid.Row="1" VerticalAlignment="Top" Width="85" Height="45" FontFamily="Century Gothic" BorderBrush="#00707070" Background="#CC6BAAED" Foreground="White"/>
+        <Button x:Name="BackSearch" Content="Back" HorizontalAlignment="Left" Margin="312,0,0,0" VerticalAlignment="Center" Width="53" FontFamily="Century Gothic" Background="#CC6BAAED" Foreground="White" BorderBrush="#00707070"/>
         <Label Content="Search" HorizontalAlignment="Left" Margin="147,0,0,0" VerticalAlignment="Center" Cursor="Pen" Foreground="#FF7F94D4" FontFamily="Century Gothic" FontSize="22" FontWeight="Bold" FontStyle="Italic"/>
         <Label Content="Age:" HorizontalAlignment="Left" Margin="10,14,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Century Gothic" FontWeight="Bold"/>
         <Label Content="Hobby:" HorizontalAlignment="Left" Margin="3,53,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Century Gothic" FontWeight="Bold"/>
-        <RadioButton Content="Female" HorizontalAlignment="Left" Margin="185,53,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="Gender" FontFamily="Century Gothic"/>
-        <RadioButton Content="Male" HorizontalAlignment="Left" Margin="185,33,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="Gender" IsChecked="True" FontFamily="Century Gothic"/>
+        <RadioButton x:Name="Female" Content="Female" HorizontalAlignment="Left" Margin="185,53,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="Gender" FontFamily="Century Gothic"/>
+        <RadioButton x:Name="Male" Content="Male" HorizontalAlignment="Left" Margin="185,33,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="Gender" IsChecked="True" FontFamily="Century Gothic"/>
         <ListBox HorizontalAlignment="Left" Height="265" Margin="29,20,0,0" Grid.Row="2" VerticalAlignment="Top" Width="321" d:ItemsSource="{d:SampleData ItemCount=5}" FontFamily="Century Gothic" FontSize="16" BorderBrush="#00ABADB3"/>
     </Grid>
 </Window>
