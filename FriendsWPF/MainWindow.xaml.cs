@@ -54,7 +54,7 @@ namespace FriendsWPF
 
         private void Add(object sender, RoutedEventArgs e)
         {
-
+            //add function on a separate window
         }
 
         private void Delete(object sender, RoutedEventArgs e)
@@ -81,7 +81,7 @@ namespace FriendsWPF
 
         private void Search(object sender, RoutedEventArgs e)
         {
-
+            // search function on separate window the out put as well
         }
     }
 }
