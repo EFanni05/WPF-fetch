@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FriendsWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="WPF project" Height="450" Width="400" Cursor="Pen" Icon="/octo.png">
+    <Window.Background>
+        <ImageBrush ImageSource="/backround.jpg" Stretch="UniformToFill" TileMode="FlipX"/>
+    </Window.Background>
+
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="24*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="190*"/>
+        </Grid.RowDefinitions>
+        <ListBox HorizontalAlignment="Center" Name="List" Height="312" VerticalAlignment="Top" Width="219" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,28,0,0" Grid.Row="1" FontFamily="Century Gothic" FontSize="14" Background="#7FFFFFFF" BorderBrush="#00ABADB3"/>
+        <Button x:Name="LoadButton" Grid.Column="2" Content="Load" HorizontalAlignment="Center" Margin="0,28,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="70" Foreground="White" FontFamily="Century Gothic" BorderBrush="#00707070">
+            <Button.Background>
+                <SolidColorBrush Color="#CC6BAAED"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="AddButton" Grid.Column="2" Content="Add" HorizontalAlignment="Center" Margin="0,63,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="70" Background="#CC6BAAED" Foreground="White" FontFamily="Century Gothic" BorderBrush="#00707070"/>
+        <Button x:Name="DeleteButton" Grid.Column="2" Content="Delete" HorizontalAlignment="Center" Margin="0,98,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="70" Background="#CC6BAAED" Foreground="White" FontFamily="Century Gothic" BorderBrush="#00707070"/>
+        <Button x:Name="SearchButton" Grid.Column="2" Content="Search" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="70" Margin="0,133,0,0" Background="#CC6BAAED" Foreground="White" FontFamily="Century Gothic" BorderBrush="#00707070"/>
+        <Label x:Name="resultsLable" Grid.Column="1" Content="Reults:" HorizontalAlignment="Center" Height="35" Margin="0,190,0,0" Grid.Row="1" VerticalAlignment="Top" Width="128" FontSize="20" FontFamily="Century Gothic" Foreground="#FF323346"/>
+        <Label Content="Friend finder" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontStyle="Italic" Foreground="#FF7F94D4" FontFamily="Century Gothic" Width="148" Cursor="Pen" Margin="0,7,0,0"/>
 
     </Grid>
 </Window>
