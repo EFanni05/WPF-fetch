@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FriendsWPF"
         mc:Ignorable="d"
-        Title="WPF project" Height="450" Width="400" Cursor="Pen" Icon="/octo.png">
+        Title="WPF project" Height="450" Width="388" Cursor="Pen" Icon="/octo.png">
     <Window.Background>
         <ImageBrush ImageSource="/backround.jpg" Stretch="UniformToFill" TileMode="FlipX"/>
     </Window.Background>
@@ -19,7 +19,7 @@
             <RowDefinition Height="27*"/>
             <RowDefinition Height="190*"/>
         </Grid.RowDefinitions>
-        <ListBox HorizontalAlignment="Center" Name="List" Height="312" VerticalAlignment="Top" Width="219" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,28,0,0" Grid.Row="1" FontFamily="Century Gothic" FontSize="14" Background="#7FFFFFFF" BorderBrush="#00ABADB3"/>
+        <ListBox HorizontalAlignment="Center" Name="List" Height="312" VerticalAlignment="Top" Width="219" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,28,0,0" Grid.Row="1" FontFamily="Century Gothic" Background="#7FFFFFFF" BorderBrush="#00ABADB3"/>
         <Button x:Name="LoadButton" Grid.Column="2" Content="Load" HorizontalAlignment="Center" Margin="0,28,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="70" Foreground="White" FontFamily="Century Gothic" BorderBrush="#00707070">
             <Button.Background>
                 <SolidColorBrush Color="#CC6BAAED"/>

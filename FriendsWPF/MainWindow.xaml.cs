@@ -20,6 +20,7 @@ namespace FriendsWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static string link = "https://retoolapi.dev/nuBvDe/peoples";
         public MainWindow()
         {
             InitializeComponent();
