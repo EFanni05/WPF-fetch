@@ -22,7 +22,6 @@ namespace FetchWPF
         public Search(List<People> peoples)
         {
             InitializeComponent();
-            MessageBox.Show(peoples[0].ToString());
         }
     }
 }
