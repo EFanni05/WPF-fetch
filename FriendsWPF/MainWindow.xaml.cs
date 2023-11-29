@@ -25,7 +25,6 @@ namespace FriendsWPF
     {
         private static readonly string link = "https://retoolapi.dev/nuBvDe/peoples";
         List<People> peoples;
-        //People addPeople;
 
         static HttpClient client = new HttpClient();
 
@@ -63,7 +62,9 @@ namespace FriendsWPF
 
         private void Add(object sender, RoutedEventArgs e)
         {
-            //add function on a separate window
+            AddWindow Add = new AddWindow(peoples[peoples.Count-1].Id);
+            main.Close();
+            Add.Show();
         }
 
         private void Delete(object sender, RoutedEventArgs e)

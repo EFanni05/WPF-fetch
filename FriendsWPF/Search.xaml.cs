@@ -35,12 +35,13 @@ namespace FetchWPF
                 List<People> searchPeople = new List<People>();
                 if (hobbyTextbox.Text.Trim() == ""){
                     bool? x = Male.IsChecked;
-                    string gender;
+                    bool? y = Female.IsChecked;
+                    string gender = "";
                     if (x == true)
                     {
                         gender = "M";
                     }
-                    else
+                    if (y == true)
                     {
                         gender = "F";
                     }
@@ -49,12 +50,13 @@ namespace FetchWPF
                 else
                 {
                     bool? x = Male.IsChecked;
-                    string gender;
+                    bool? y = Female.IsChecked;
+                    string gender = "";
                     if (x == true)
                     {
                         gender = "M";
                     }
-                    else
+                    if (y == true)
                     {
                         gender = "F";
                     }
@@ -76,12 +78,13 @@ namespace FetchWPF
                 if (!int.TryParse(ageTextbox.Text.Trim(), out int age1))
                 {
                     bool? x = Male.IsChecked;
-                    string gender;
+                    bool? y = Female.IsChecked;
+                    string gender = "";
                     if (x == true)
                     {
                         gender = "M";
                     }
-                    else
+                    if (y == true)
                     {
                         gender = "F";
                     }
@@ -90,12 +93,13 @@ namespace FetchWPF
                 else
                 {
                     bool? x = Male.IsChecked;
-                    string gender;
+                    bool? y = Female.IsChecked;
+                    string gender = "";
                     if (x == true)
                     {
                         gender = "M";
                     }
-                    else
+                    if (y == true)
                     {
                         gender = "F";
                     }
@@ -114,12 +118,13 @@ namespace FetchWPF
             {
                 string hobby = hobbyTextbox.Text.Trim();
                 bool? x = Male.IsChecked;
-                string gender;
-                if(x == true)
+                bool? y = Female.IsChecked;
+                string gender = "";
+                if (x == true)
                 {
                     gender = "M";
                 }
-                else
+                if (y == true)
                 {
                     gender = "F";
                 }

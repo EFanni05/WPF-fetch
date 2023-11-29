@@ -20,6 +20,15 @@ namespace FetchWPF
         [JsonProperty("hobby")]
         private string hobby;
 
+        public People(int id, string name, int age, string gender, string hobby)
+        {
+            Id = id;
+            Name = name;
+            Age = age;
+            Gender = gender;
+            Hobby = hobby;
+        }
+
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public int Age { get => age; set => age = value; }
