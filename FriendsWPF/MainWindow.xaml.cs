@@ -59,7 +59,20 @@ namespace FriendsWPF
 
         private void Delete(object sender, RoutedEventArgs e)
         {
-
+            if(List.SelectedItems.Count < 1)
+            {
+                MessageBox.Show("Please select an item to delete");
+            }
+            else
+            {
+                //i know this isnt the prettiest
+                string item = List.SelectedItem.ToString();
+                string x = item.Substring(0, 3).Replace('.', ' ').Trim();
+                int id = int.Parse(x);
+                People delete = peoples.Find(x => x.Id == id);
+                peoples.Remove(delete);
+                MessageBox.Show("Please load it again the list");
+            }
         }
 
         private void Search(object sender, RoutedEventArgs e)
