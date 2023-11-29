@@ -9,13 +9,11 @@
 
   <ItemGroup>
     <None Remove="backround.jpg" />
-    <None Remove="bg_As.png" />
     <None Remove="octo.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="backround.jpg" />
-    <Resource Include="bg_As.png" />
     <Resource Include="octo.png" />
   </ItemGroup>
 
