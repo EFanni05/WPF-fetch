@@ -20,9 +20,15 @@ namespace FetchWPF
         [JsonProperty("hobby")]
         private string hobby;
 
+        public int Id { get => id; set => id = value; }
+        public string Name { get => name; set => name = value; }
+        public int Age { get => age; set => age = value; }
+        public string Gender { get => gender; set => gender = value; }
+        public string Hobby { get => hobby; set => hobby = value; }
+
         public override string ToString()
         {
-            return $"{id}. {name} ({age} , {gender})\nHobby: {hobby}";
+            return $"{Id}. {Name} ({Age} , {Gender})\nHobby: {Hobby}";
         }
     }
 }
