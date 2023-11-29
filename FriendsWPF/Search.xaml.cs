@@ -34,13 +34,32 @@ namespace FetchWPF
             {
                 List<People> searchPeople = new List<People>();
                 if (hobbyTextbox.Text.Trim() == ""){
-                    //gender only search
+                    bool? x = Male.IsChecked;
+                    string gender;
+                    if (x == true)
+                    {
+                        gender = "M";
+                    }
+                    else
+                    {
+                        gender = "F";
+                    }
+                    searchPeople = people.FindAll(x => x.Gender == gender).ToList<People>();
                 }
                 else
                 {
-                    //hobby + gender search
+                    bool? x = Male.IsChecked;
+                    string gender;
+                    if (x == true)
+                    {
+                        gender = "M";
+                    }
+                    else
+                    {
+                        gender = "F";
+                    }
                     string hobby = hobbyTextbox.Text.Trim();
-                    searchPeople = people.FindAll(x => x.Hobby == hobby).ToList<People>();
+                    searchPeople = people.FindAll(x => x.Hobby == hobby).FindAll(x => x.Gender == gender).ToList<People>();
                 }
                 if (searchlist.Items.Count > 0)
                 {
@@ -56,12 +75,31 @@ namespace FetchWPF
                 List<People> searchPeople = new List<People>();
                 if (!int.TryParse(ageTextbox.Text.Trim(), out int age1))
                 {
-                    //gender only search
+                    bool? x = Male.IsChecked;
+                    string gender;
+                    if (x == true)
+                    {
+                        gender = "M";
+                    }
+                    else
+                    {
+                        gender = "F";
+                    }
+                    searchPeople = people.FindAll(x => x.Gender == gender).ToList<People>();
                 }
                 else
                 {
-                    //age + gender search
-                    searchPeople = people.FindAll(x => x.Age == age).ToList<People>();
+                    bool? x = Male.IsChecked;
+                    string gender;
+                    if (x == true)
+                    {
+                        gender = "M";
+                    }
+                    else
+                    {
+                        gender = "F";
+                    }
+                    searchPeople = people.FindAll(x => x.Age == age).FindAll(x => x.Gender == gender).ToList<People>();
                 }
                 if (searchlist.Items.Count > 0)
                 {
@@ -75,17 +113,17 @@ namespace FetchWPF
             else
             {
                 string hobby = hobbyTextbox.Text.Trim();
-                //string gender;
-                //if (Male.Checked == true)
-                //{
-                //    gender = "M";
-                //}
-                //else
-                //{
-                //    gender = "F";
-                //}
-                //.FindAll(x => x.Gender == gender)
-                List<People> searchPeople = people.FindAll(x => x.Age == age).FindAll(x => x.Hobby == hobby).ToList<People>();
+                bool? x = Male.IsChecked;
+                string gender;
+                if(x == true)
+                {
+                    gender = "M";
+                }
+                else
+                {
+                    gender = "F";
+                }
+                List<People> searchPeople = people.FindAll(x => x.Age == age).FindAll(x => x.Hobby == hobby).FindAll(x => x.Gender == gender).ToList<People>();
                 if (searchlist.Items.Count > 0)
                 {
                     searchlist.Items.Clear();
@@ -95,13 +133,6 @@ namespace FetchWPF
                     searchlist.Items.Add(searchPeople[i].ToString());
                 }
             }
-        }
-
-        private void back(object sender, RoutedEventArgs e)
-        {
-            SearchWindow.Close();
-            MainWindow main = new MainWindow();
-            //open main again
         }
     }
 }
