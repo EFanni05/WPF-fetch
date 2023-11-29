@@ -22,7 +22,7 @@ namespace FetchWPF
 
         public override string ToString()
         {
-            return $"{id}. {name} ({age} , {gender})\tHobby: {hobby}";
+            return $"{id}. {name} ({age} , {gender})\nHobby: {hobby}";
         }
     }
 }
